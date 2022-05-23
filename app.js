@@ -57,12 +57,12 @@ app.get('/',(req,res)=>{
 app.post('/',(req,res)=>{
     let query = req.body.query.toString().split(' ');
     let orig = req.body.query.toString();
-    console.log(query);
     query = query.map(ele =>{
         return ele.toLowerCase();
     })
     query = query.filter((el)=>!stopwords.includes(el));
     query = query.filter((el)=>keywords.includes(el));
+    console.log(query);
     if(query.length == 0){
         res.render('results',{title: 'Search Results', query:"", problems: {}});
     }else{
