@@ -22,7 +22,7 @@ for(let i = 0; i<keywords.length-1; i++){
 }
 //Connecting to the Database
 const dbURI = 'mongodb+srv://decryptr:KtkMg1YvGRTtgDv1@search-engine-problems.r1iwn.mongodb.net/problem-db?retryWrites=true&w=majority'
-mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URI||dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then((result)=>{
         console.log('Connected to DB');
         Problem.find({},{norm:1, tfidf:1, _id:0})
