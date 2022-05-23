@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Serif:ital@1&display=swap');
+body{
+    min-height: 100%;
+    position: relative;
+    overflow: auto;
+    background-color: whitesmoke;
+    font-family: 'Montserrat', serif;
+}
+footer{
+    width: 100%;
+    bottom: 0;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 5px solid #8f746c;
+}
+h2{
+    color: brown;
+    font-size: 28px;
+    text-decoration: underline;
+}
+h3{
+    color: brown;
+    font-size: 22px;
+}
+h4{
+    font-size: 18px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+}
+input.search{
+    width: 500px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+button.search{
+    font-size: 20px;
+    border-radius: 5px;
+}
+button.search:hover{
+    color: whitesmoke;
+    background-color: #8f746c;
+}
+img.logo{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+p.error {
+    text-align: center;
+}
+img.error{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.details{
+    text-align: center;
+    text-decoration: underline;
+}
+p.details-cont1{
+    text-transform: capitalize;
+    color: brown;
+    font-weight: bolder;
+}
+h4.details-cont2{
+    text-decoration: underline;
+    color: #8f746c;
+}
+p.details-cont2{
+    font-size: 18px;
+    text-align: justify;
+    line-height: 2.3em;
+}
+a.details-cont2{
+    color: sienna;
+}
+a.details-cont2:visited{
+    color:sienna;
+}
+a.details-cont2:hover{
+    color:brown;
+}
+.results-search{
+    display: inline-block;
+}
+a.results-search{
+    color: whitesmoke;
+}
+img.results-search{
+    width: 40%;
+    height: 40%;
+}
+input.results-search{
+    position: relative;
+    width: 500px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    right: 50%;
+    bottom: 30px;
+}
+button.results-search {
+    position: relative;
+    font-size: 16px;
+    border-radius: 5px;
+    right: 50%;
+    bottom: 30px;
+}
+.parent{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: #8f746c solid 5px;
+}
+.nores{
+    padding-top: 20px;
+}
+a.res{
+    display: inline;
+    color: brown;
+}
+h4.res{
+    display: inline;
+}
+p.res1{
+    text-transform: capitalize;
+}

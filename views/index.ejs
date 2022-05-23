@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <a href="/">
+        <img src="/logo.png" class="logo">
+    </a>
+    <div>
+        <form action="/" method = "POST" class="search">
+            <input type="text" name ="query" class="search" required>
+            <button class="search">Search</button>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <!-- class="details" -->
+    <div>
+        <%- include("./partials/nav.ejs") %>
+        <h3 class="details"><%= prob.title %></h3>
+        <!-- class="problem-content" -->
+        <div>
+            <p class="details-cont1">Tags: <%= prob.tags %></p>
+            <p class="details-cont1">Difficulty: <%= prob.difficulty %></p>
+            <h4 class="details-cont2">Statement: </h4>
+            <p class="details-cont2"><%= prob.statement %></p>
+            <p class="details-cont2">Read this problem on CodeForces: <a class="details-cont2" href="<%= prob.url %>"><%= prob.url %></a></p>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

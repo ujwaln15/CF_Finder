@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <div>
+        <% if(problems.length > 0){ %>
+                <h4>Showing results for "<%= query%>"</h4>
+            <% problems.forEach(problem => { %>
+                <a href="/results/<%= problem._id %>" class="res"><h4 class="res"><%= problem.title %></h4></a>
+                <p class="res1">Tags: <%= problem.tags %></p>
+                <p class="res2">Difficulty: <%= problem.difficulty %></p>
+                <p class="res3"><%= problem.snippet %>...</p>
+            <% }) %>
+        <%} else { %>
+            <div class="nores"></div>
+            <p>Unfortunately, your query did not match any documents :(</p>
+            <p>You can try the following:</p>
+            <ul style="list-style: inside;">
+                <li>Try different keywords.</li>
+                <li>Try more general keywords.</li>
+                <li>Try fewer keywords.</li>
+            </ul>
+        <% } %>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
