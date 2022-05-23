@@ -33,7 +33,8 @@ mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
                 uptfidf = result.map(function(obj){
                     return obj.tfidf;
                 });
-                app.listen(3000);
+                const PORT = process.env.PORT || 3000;
+                app.listen(PORT);
             })
             .catch((err)=>{
                 console.log(err);
