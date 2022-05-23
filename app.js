@@ -14,6 +14,7 @@ const stopwords = fs.readFileSync('stopwords.txt').toString().split('\r\n');
 const keywords = fs.readFileSync('keywords.txt').toString().split('\r\n');
 let idf = fs.readFileSync('idf.txt').toString().split('\r\n');
 idf = idf.map(Number);
+console.log(keywords);
 
 let tfnorm = [];
 let uptfidf = [];
