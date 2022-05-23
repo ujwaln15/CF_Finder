@@ -10,11 +10,10 @@ const { readFileSync } = require('graceful-fs');
 
 const app = express();
 key_to_idx = {};
-const stopwords = fs.readFileSync('stopwords.txt').toString().split('\r\n');
-const keywords = fs.readFileSync('keywords.txt').toString().split('\r\n');
-let idf = fs.readFileSync('idf.txt').toString().split('\r\n');
+const stopwords = fs.readFileSync('stopwords.txt').toString().split('\n');
+const keywords = fs.readFileSync('keywords.txt').toString().split('\n');
+let idf = fs.readFileSync('idf.txt').toString().split('\n');
 idf = idf.map(Number);
-console.log(keywords);
 
 let tfnorm = [];
 let uptfidf = [];
@@ -62,7 +61,6 @@ app.post('/',(req,res)=>{
     })
     query = query.filter((el)=>!stopwords.includes(el));
     query = query.filter((el)=>keywords.includes(el));
-    console.log(query);
     if(query.length == 0){
         res.render('results',{title: 'Search Results', query:"", problems: {}});
     }else{
