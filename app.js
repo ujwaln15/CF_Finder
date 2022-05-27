@@ -97,7 +97,7 @@ app.post('/',(req,res)=>{
             }
             curr_sim = curr_sim*sum;
             similarity.push({
-                sim: sum,
+                sim: curr_sim,
                 id: i-1
             })
         }
