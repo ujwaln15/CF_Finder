@@ -55,7 +55,10 @@ app.get('/',(req,res)=>{
 
 app.post('/',(req,res)=>{
     let query = req.body.query.toString().split(' ');
-    let orig = req.body.query.toString();
+    let orig = req.body.query.toString().trim();
+    query = query.map(el=>{
+        return el.replace(/\W|_/g, '');
+    })
     query = query.map(ele =>{
         return ele.toLowerCase();
     })
