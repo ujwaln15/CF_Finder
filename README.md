@@ -9,4 +9,5 @@ Name: Ujwal Nitin Nayak &emsp; &emsp; Display Name on AZ: decryptr &emsp; &emsp;
 5. Finally, open up a browser and in the address bar, type "http://localhost:3000/".
 
 Heroku Link:  https://cf-finder-app.herokuapp.com/
+<br/>
 Note: The web application is not mobile-compatible
